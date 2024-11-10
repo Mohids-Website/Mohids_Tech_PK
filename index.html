@@ -6,7 +6,7 @@
     <title>Mohid's Tech Store</title>
     <style>
         /* General Reset */
-        * 
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -69,8 +69,8 @@
         }
 
         .carousel-container img {
-            width: 700px;
-            height: 500px;
+            width: 100px;
+            height: 75px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             margin: 0 10px;
@@ -133,6 +133,31 @@
         header h1, p, nav ul li a {
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
+
+        /* Product Showcase Section */
+        .product-showcase {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .product {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 200px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .product h2 {
+            font-size: 1.2em;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -160,15 +185,40 @@
     <!-- Gallery Section -->
     <section class="carousel-container">
         <ul>
-            <li><a href="AirPods.html"><img src="path/to/AirPods.png" alt="AirPods"></a></li>
-            <li><a href="HandsFree.html"><img src="path/to/HandsFree.png" alt="HandsFree"></a></li>
-            <li><a href="Headphones.html"><img src="path/to/Headphones.png" alt="headphones"></a></li>
-            <li><a href="Microphones.html"><img src="path/to/Microphones.png" alt="Microphones"></a></li>
-            <li><a href="Smart Watches.html"><img src="path/to/Smart Watches.png" alt="Smart Watches"></a></li>
-            <li><a href="Combo Deals.html"><img src="path/to/Combo Deals.png" alt="Combo Deals"></a></li>
-            <li><a href="Gaming.html"><img src="path/to/Gaming.png" alt="Gaming"></a></li>
-            <li><a href="Accessories & Gadgets.html"><img src="path/to/Accessories & Gadgets.png" alt="Accessories & Gadgets"></a></li>
+            <li><a href="AirPods.html"><img src="/mnt/data/AirPods.png" alt="AirPods"></a></li>
+            <li><a href="HandsFree.html"><img src="/mnt/data/HandsFree.png" alt="HandsFree"></a></li>
+            <li><a href="Headphones.html"><img src="/mnt/data/Headphones.png" alt="Headphones"></a></li>
+            <li><a href="Microphones.html"><img src="/mnt/data/Microphones.png" alt="Microphones"></a></li>
+            <li><a href="Smart Watches.html"><img src="/mnt/data/Smart Watches.png" alt="Smart Watches"></a></li>
+            <li><a href="Combo Deals.html"><img src="/mnt/data/Combo Deals.png" alt="Combo Deals"></a></li>
+            <li><a href="Gaming.html"><img src="/mnt/data/Gaming.png" alt="Gaming"></a></li>
+            <li><a href="Accessories & Gadgets.html"><img src="/mnt/data/Accessories & Gadgets.png" alt="Accessories & Gadgets"></a></li>
         </ul>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="product-showcase">
+        <h1>Product Showcase</h1>
+
+        <div class="product">
+            <h2>AirPods</h2>
+            <img src="AirPods.png" alt="AirPods">
+        </div>
+
+        <div class="product">
+            <h2>Combo Deals</h2>
+            <img src="Combo Deals.png" alt="Combo Deals">
+        </div>
+
+        <div class="product">
+            <h2>Gaming</h2>
+            <img src="Gaming.png" alt="Gaming">
+        </div>
+
+        <div class="product">
+            <h2>Smart Watches</h2>
+            <img src="Smart Watches.png" alt="Smart Watches">
+        </div>
     </section>
 
     <!-- About Us Section -->
