@@ -60,6 +60,31 @@
             color: #ff5722;
         }
 
+        /* Categories Section */
+        .categories {
+            display: flex; /* Changed to horizontal arrangement */
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .category {
+            margin: 0 15px;
+        }
+
+        .category a {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(35, 142, 194);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .category a:hover {
+            background-color: #ff5722;
+        }
+
         /* New Images Section */
         .new-images {
             display: flex;
@@ -312,7 +337,7 @@
         }
 
         function updateSlidePosition() {
-            const newTransform = translateX(-${currentIndex * 100}%);
+            const newTransform = `translateX(-${currentIndex * 100}%)`;
             document.querySelector('.carousel').style.transform = newTransform;
         }
     </script>
