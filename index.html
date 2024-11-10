@@ -30,6 +30,29 @@
             text-align: center;
         }
 
+        /* Search Bar Style */
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .search-bar {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+            color: white;
+        }
+
+        .search-bar::placeholder {
+            color: #888;
+        }
+
         /* Navigation Bar Style */
         nav {
             display: flex;
@@ -163,8 +186,8 @@
         /* Product Title Styling */
         .product h2 {
             font-size: 1em;
-            color: #ffffff; /* Text color set to white */
-            background-color: rgb(35, 142, 194); /* Background color set to RGB 35, 142, 194 */
+            color: #ffffff;
+            background-color: rgb(35, 142, 194);
             padding: 10px;
             border-radius: 5px;
             margin-top: 10px;
@@ -261,6 +284,13 @@
         <p>A TechStore Website For Every Kind Of Technical Products.</p>
     </header>
 
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <form action="search_results.html" method="GET">
+            <input type="text" name="query" class="search-bar" placeholder="Search for products..." required>
+        </form>
+    </div>
+
     <!-- Product Categories -->
     <section class="categories">
         <div class="category">
@@ -295,15 +325,15 @@
         <div class="carousel">
             <div class="product">
                 <h2>AirPods</h2>
-                <a href="AirPods.html"><img src="AirPods.png" alt="AirPods"></a>
+                <a href="AirPods.html"><img src="AirPods.jpg" alt="AirPods"></a>
             </div>
             <div class="product">
-                <h2>Combo Deals</h2>
-                <a href="ComboDeals.html"><img src="Combo Deals.png" alt="Combo Deals"></a>
+                <h2>HandsFree</h2>
+                <a href="HandsFree.html"><img src="HandsFree.jpg" alt="HandsFree"></a>
             </div>
             <div class="product">
-                <h2>Gaming</h2>
-                <a href="Gaming.html"><img src="Gaming.png" alt="Gaming"></a>
+                <h2>Headphones</h2>
+                <a href="Headphones.html"><img src="Headphones.jpg" alt="Headphones"></a>
             </div>
             <div class="product">
                 <h2>Smart Watches</h2>
@@ -324,12 +354,12 @@
     <!-- About Us Section -->
     <section class="about-us">
         <h2>About Us</h2>
-        <p>My name is MOHID JADOON, and I'm from Abbottabad, Pakistan. I started this website out of my passion for tech to make people's tech experiences easier!</p>
+        <p>Mohid's Tech Store is dedicated to providing the latest and greatest in tech gadgets and accessories. Whether you're looking for high-quality headphones, gaming gear, or smartwatches, we have everything you need to stay ahead in the tech world.</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mohid's Tech Store. All rights reserved.</p>
+        <p>&copy; 2024 Mohid's Tech Store | All rights reserved.</p>
     </footer>
 
     <script>
