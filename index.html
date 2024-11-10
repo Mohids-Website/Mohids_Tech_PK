@@ -39,19 +39,20 @@
         }
 
         .search-bar {
-            width: 80%;
-            max-width: 400px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
-            color: white;
-        }
+    width: 90%; /* Adjusted to make it wider */
+    max-width: 600px; /* Increased maximum width */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+    color: white;
+}
 
-        .search-bar::placeholder {
-            color: #888;
-        }
+.search-bar::placeholder {
+    color: #888;
+}
+
 
         /* Navigation Bar Style */
         nav {
@@ -319,32 +320,31 @@
         </div>
     </section>
     
-   <!-- Product Showcase Section -->
-<section class="product-showcase">
-    <h1 class="background-text">Product Showcase</h1>
-    <div class="carousel">
-        <div class="product">
-            <h2>AirPods</h2>
-            <a href="AirPods.html"><img src="AirPods.png" alt="AirPods"></a>
+    <!-- Product Showcase Section -->
+    <section class="product-showcase">
+        <h1 class="background-text">Product Showcase</h1>
+        <div class="carousel">
+            <div class="product">
+                <h2>AirPods</h2>
+                <a href="AirPods.html"><img src="AirPods.png" alt="AirPods"></a>
+            </div>
+            <div class="product">
+                <h2>HandsFree</h2>
+                <a href="HandsFree.html"><img src="HandsFree.png" alt="HandsFree"></a>
+            </div>
+            <div class="product">
+                <h2>Headphones</h2>
+                <a href="Headphones.html"><img src="Headphones.png" alt="Headphones"></a>
+            </div>
+            <div class="product">
+                <h2>Smart Watches</h2>
+                <a href="SmartWatches.html"><img src="SmartWatches.png" alt="Smart Watches"></a>
+            </div>
         </div>
-        <div class="product">
-            <h2>HandsFree</h2>
-            <a href="HandsFree.html"><img src="HandsFree.png" alt="HandsFree"></a>
-        </div>
-        <div class="product">
-            <h2>Headphones</h2>
-            <a href="Headphones.html"><img src="Headphones.png" alt="Headphones"></a>
-        </div>
-        <div class="product">
-            <h2>Smart Watches</h2>
-            <a href="SmartWatches.html"><img src="SmartWatches.png" alt="Smart Watches"></a>
-        </div>
-    </div>
-    <div class="arrow left" onclick="prevSlide()">&#10094;</div>
-    <div class="arrow right" onclick="nextSlide()">&#10095;</div>
-</section>
+        <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+    </section>
 
-    
     <!-- New Images Section -->
     <section class="new-images">
         <img src="Our Channels.png" alt="Our Channels">
@@ -378,7 +378,7 @@
         }
 
         function updateSlidePosition() {
-            const newTransform = translateX(-${currentIndex * 100}%);
+            const newTransform = `translateX(-${currentIndex * 100}%)`;
             document.querySelector('.carousel').style.transform = newTransform;
         }
     </script>
