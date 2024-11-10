@@ -91,7 +91,9 @@
         /* New Image Section */
         .image-section {
             display: flex;
+            flex-direction: column; /* Changed to vertical arrangement */
             justify-content: center;
+            align-items: center;
             gap: 20px;
             margin: 20px auto;
             padding: 20px;
@@ -99,8 +101,8 @@
         }
 
         .image-section img {
-            width: 200px;
-            height: auto;
+            width: 450px; /* Updated width */
+            height: auto; /* Height auto for proportional scaling */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
