@@ -173,9 +173,14 @@
             cursor: pointer;
         }
 
+        /* Background behind product names */
         .product h2 {
+            background-color: rgba(35, 142, 194, 1); /* Background behind product names */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
             font-size: 1.2em;
-            color: white; /* Change product title text color to white */
+            margin-top: 10px;
         }
 
         /* Navigation Arrows */
@@ -297,8 +302,8 @@
         </div>
 
         <!-- Navigation Arrows -->
-        <span class="arrow left" onclick="prevSlide()">&#8249;</span>
-        <span class="arrow right" onclick="nextSlide()">&#8250;</span>
+        <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow right" onclick="nextSlide()">&#10095;</div>
     </section>
 
     <!-- About Us Section -->
