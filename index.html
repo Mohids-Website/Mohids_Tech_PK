@@ -40,10 +40,11 @@
         nav ul {
             list-style: none;
             display: flex;
+            flex-direction: column; /* Changed to vertical arrangement */
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 10px 0;
         }
 
         nav ul li a {
@@ -72,15 +73,15 @@
         }
 
         .new-images img {
-            width: 700px;
-            height: auto;
+            width: 800px;
+            height: 400px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         /* About Us Section */
         .about-us {
-            background-color: #000000;
+            background-color: rgb(35, 142, 194);
             color: #ffffff;
             margin: 20px auto;
             padding: 20px;
@@ -91,7 +92,7 @@
 
         .about-us h2 {
             text-align: center;
-            color: #ff5722;
+            color: #ffffff;
             margin-bottom: 15px;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
@@ -102,7 +103,7 @@
         }
 
         .about-us a {
-            color: #ff5722;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
         }
@@ -181,6 +182,7 @@
             padding: 10px;
             border-radius: 5px;
             display: inline-block;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -273,7 +275,7 @@
         <div class="arrow right" onclick="nextSlide()">&#10095;</div>
     </section>
 
-        <!-- New Images Section -->
+    <!-- New Images Section -->
     <section class="new-images">
         <img src="Our Channels.png" alt="Our Channels.png">
         <img src="Contact Us.png" alt="Contact Us.png">
