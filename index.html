@@ -377,7 +377,7 @@
         }
 
         function updateSlidePosition() {
-            const newTransform = `translateX(-${currentIndex * 100}%)`;
+            const newTransform = translateX(-${currentIndex * 100}%);
             document.querySelector('.carousel').style.transform = newTransform;
         }
     </script>
