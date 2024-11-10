@@ -16,9 +16,10 @@
         body {
             font-family: Arial, sans-serif;
             background-image: url('https://files.oaiusercontent.com/file-vwinHoS6ZzMAkxp3FEGhAXS8?se=2024-11-10T04%3A04%3A21Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8ea0edec-5556-4f88-8eb8-e87188d7b3ab.webp&sig=ox8M7w4kD62xDfornYRBSzym0ubmqca3pRBp0c0qKxU%3D');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-color: #333333; /* Fallback color */
+            background-size: cover; /* Make sure the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
             color: #ffffff;
         }
 
@@ -277,52 +278,34 @@
         <h2>About Us</h2>
         <p>
             ⦿ <strong>𝗜𝗡𝗧𝗥𝗢</strong><br>
-            ᴍʏ ɴᴀᴍᴇ ɪs MOHID JADOON & ɪ'ᴍ ꜰʀᴏᴍ ABBOTTABAD, ᴘᴀᴋɪsᴛᴀɴ. ɪ ꜱᴛᴀʀᴛᴇᴅ ᴛʜɪs WEBSITE ʙᴇᴄᴀᴜsᴇ ɢᴀᴍɪɴɢ & ᴇʟᴇᴄᴛʀᴏɴɪᴄs ᴀʀᴇ ᴍʏ ᴘᴀsꜲɪᴏɴ ᴀɴᴅ 𝑰 𝑾𝑨𝑵𝑻 𝑻𝑶 𝑺𝑯𝑨𝑹𝑬 𝑰𝑻 𝑾𝑰𝑻𝑯 𝑬𝑽𝑬𝑹𝒀𝑶𝑵𝑬.<br><br>
-            ⦿ <strong>WHAT WE OFFER</strong><br>
-            ⦿ ᴏᴇ ᴄᴏᴍᴘʟᴇᴛᴇ ᴇᴠᴇʀʏ ᴋɪɴᴅ ᴏꜰ ᴛᴇᴄʜɴᴏʟᴏɢʏ ᴡɪᴛʜ ʙᴇsᴛ ᴛᴀʀɢᴇᴛ.<br><br>
-            ⦿ <strong>OUR SOCIAL LINKS</strong><br>
-            <strong>YOUTUBE</strong>: <a href="https://www.youtube.com/channel/UCkgG7vWHGJM5uW2gI38geyA" target="_blank">https://www.youtube.com/channel/UCkgG7vWHGJM5uW2gI38geyA</a><br>
-            <strong>DISCORD</strong>: <a href="https://discord.gg/2Btu6ErGVV" target="_blank">https://discord.gg/2Btu6ErGVV</a>
-        </p>
-        <p>
-            We Are Here To Build Communities.<br>
-        </p>
-        <p>
-            COPYRIGHT OWNED BY AbdulMohidJadoon
+            ᴍʏ ɴᴀᴍᴇ ɪs MOHID JADOON & ɪ'ᴍ ꜰʀᴏᴍ ABBOTTABAD, ᴘᴀᴋɪsᴛᴀɴ. ɪ ꜱᴛᴀʀᴛᴇᴅ ᴛʜɪs WEBSITE ʙᴇᴄᴀᴜsᴇ ᴏғ ᴍʏ ᴘᴀssɪᴏɴ ꜰᴏʀ ᴛᴇᴄʜ & ᴛᴏ ᴍᴀᴋᴇ ᴘᴇᴏᴘʟᴇ's ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴏꜰ ᴜsɪɴɢ ᴛᴇᴄʜ ᴇᴀsɪᴇʀ!
+            <br><br>
+            𝗙ᴏʀ 𝗺ᴏʀᴇ 𝗱𝗲𝘁𝗮𝗶𝗹𝘀 𝗰𝗵𝗲𝗰𝗸 𝗺𝘆 𝗰𝗼𝗻𝘁𝗮𝗰𝘁 𝘂𝘀 𝘀𝗲ct𝗶𝗼𝗻 <a href="Contact.html">here</a>.
         </p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; Website By AbdulMohidJadoon</p>
+        <p>&copy; 2024 Mohid's Tech Store. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Carousel Navigation -->
     <script>
         let currentIndex = 0;
-
-        function showSlide(index) {
-            const slides = document.querySelector('.carousel');
-            const totalSlides = slides.children.length;
-            
-            if (index >= totalSlides) {
-                currentIndex = 0;
-            } else if (index < 0) {
-                currentIndex = totalSlides - 1;
-            } else {
-                currentIndex = index;
-            }
-            
-            const offset = -currentIndex * 100;
-            slides.style.transform = 'translateX(' + offset + '%)';
-        }
-
+        const slides = document.querySelectorAll('.product');
+        
         function nextSlide() {
-            showSlide(currentIndex + 1);
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlidePosition();
         }
 
         function prevSlide() {
-            showSlide(currentIndex - 1);
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            const newTransform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelector('.carousel').style.transform = newTransform;
         }
     </script>
 
