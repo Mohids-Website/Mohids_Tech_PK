@@ -20,7 +20,7 @@
             background-size: cover; /* Make sure the image covers the entire background */
             background-position: center; /* Centers the image */
             background-attachment: fixed; /* Keeps the background fixed while scrolling */
-            color: #ffffff;
+            color: rgba(35, 142, 194, 1); /* Text color changed to RGBA */
         }
 
         /* Header Style */
@@ -28,6 +28,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             padding: 15px;
             text-align: center;
+            color: rgba(35, 142, 194, 1); /* Text color changed to RGBA */
         }
 
         /* Navigation Bar Style */
@@ -48,7 +49,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #ffffff;
+            color: rgba(35, 142, 194, 1); /* Text color changed to RGBA */
             font-weight: bold;
             padding: 10px 15px;
             display: block;
@@ -62,7 +63,7 @@
         /* About Us Section */
         .about-us {
             background-color: #000000;
-            color: #ffffff;
+            color: rgba(35, 142, 194, 1); /* Text color changed to RGBA */
             margin: 20px auto;
             padding: 20px;
             width: 80%;
@@ -72,7 +73,7 @@
 
         .about-us h2 {
             text-align: center;
-            color: #ff5722;
+            color: rgba(35, 142, 194, 1); /* Heading color changed to RGBA */
             margin-bottom: 15px;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
@@ -83,7 +84,7 @@
         }
 
         .about-us a {
-            color: #ff5722;
+            color: rgba(35, 142, 194, 1); /* Link color changed to RGBA */
             text-decoration: none;
             font-weight: bold;
         }
@@ -130,7 +131,7 @@
         }
 
         .category h3 {
-            color: #ffffff;
+            color: rgba(35, 142, 194, 1); /* Category title color changed to RGBA */
             font-size: 1.1em;
         }
 
@@ -166,7 +167,7 @@
 
         .product h2 {
             font-size: 1.2em;
-            color: #333;
+            color: rgba(35, 142, 194, 1); /* Text color changed to RGBA */
         }
 
         /* Navigation Arrows */
@@ -199,7 +200,7 @@
             background-color: rgba(34, 34, 34, 0.8);
             padding: 15px;
             text-align: center;
-            color: #ffffff;
+            color: rgba(35, 142, 194, 1); /* Footer text color changed to RGBA */
         }
     </style>
 </head>
@@ -294,19 +295,16 @@
 
     <!-- New Image Section -->
     <section class="image-section">
-        <img src="Contact Us.png" alt="Contact Us">
-        <img src="Our Channels.png" alt="Our Channels">
-        <img src="Our Story.jpg" alt="Our Story">
+        <h2>New Arrivals</h2>
+        <img src="newarrival1.jpg" alt="New Arrival 1">
+        <img src="newarrival2.jpg" alt="New Arrival 2">
     </section>
 
     <!-- About Us Section -->
     <section class="about-us">
         <h2>About Us</h2>
-        <p>
-            ⦿ <strong>𝗜𝗡𝗧𝗥𝗢</strong><br>
-            ᴍʏ ɴᴀᴍᴇ ɪs MOHID JADOON & ɪ'ᴍ ꜰʀᴏᴍ ABBOTTABAD, ᴘᴀᴋɪsᴛᴀɴ. ɪ ꜱᴛᴀʀᴛᴇᴅ ᴛʜɪs WEBSITE ʙᴇᴄᴀᴜsᴇ ᴏғ ᴍʏ ᴘᴀssɪᴏɴ ꜰᴏʀ ᴛᴇᴄʜ & ᴛᴏ ᴍᴀᴋᴇ ᴘᴇᴏᴘʟᴇ's ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴏꜰ ᴜsɪɴɢ ᴛᴇᴄʜ ᴇᴀsɪᴇʀ!
-            <br><br>
-        </p>
+        <p>We are a leading provider of high-quality tech products including AirPods, Headphones, Gaming Gear, and much more. Our mission is to deliver cutting-edge technology to our customers with the best deals.</p>
+        <p><a href="about.html">Learn more about us</a></p>
     </section>
 
     <!-- Footer -->
@@ -316,21 +314,24 @@
 
     <script>
         let currentIndex = 0;
-        const slides = document.querySelectorAll('.product');
-        
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.product');
+            if (index >= slides.length) currentIndex = 0;
+            if (index < 0) currentIndex = slides.length - 1;
+
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+        }
+
         function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateSlidePosition();
+            currentIndex++;
+            showSlide(currentIndex);
         }
 
         function prevSlide() {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateSlidePosition();
-        }
-
-        function updateSlidePosition() {
-            const newTransform = `translateX(-${currentIndex * 100}%)`;
-            document.querySelector('.carousel').style.transform = newTransform;
+            currentIndex--;
+            showSlide(currentIndex);
         }
     </script>
 
