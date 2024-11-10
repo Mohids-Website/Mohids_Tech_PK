@@ -29,86 +29,24 @@
             text-align: center;
         }
 
-        /* Navigation Bar Style */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(51, 51, 51, 0.8);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 10px 15px;
-            display: block;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ff5722;
-        }
-
-        /* About Us Section */
-        .about-us {
-            background-color: #000000;
-            color: #ffffff;
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .about-us h2 {
-            text-align: center;
-            color: #ff5722;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .about-us p {
-            line-height: 1.6;
-            font-size: 1.1em;
-        }
-
-        .about-us a {
-            color: #ff5722;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Footer Style */
-        footer {
-            background-color: rgba(34, 34, 34, 0.8);
-            padding: 15px;
-            text-align: center;
-            margin-top: 20px;
-            color: #ffffff;
-        }
-
-        header h1, p, nav ul li a {
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Product Showcase Section */
+        /* Product Carousel */
         .product-showcase {
             text-align: center;
             padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
         }
 
         .product {
-            display: inline-block;
-            margin: 20px;
+            flex: 0 0 100%;
+            max-width: 100%;
             text-align: center;
         }
 
@@ -118,7 +56,7 @@
             border: 2px solid #ddd;
             border-radius: 8px;
             padding: 5px;
-            max-width: 100%;
+            cursor: pointer;
         }
 
         .product h2 {
@@ -126,20 +64,38 @@
             color: #333;
         }
 
-        /* Responsive Image for Small Screens */
-        @media (max-width: 768px) {
-            .product img {
-                width: 100%;
-                max-width: 500px;
-            }
+        /* Navigation Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            border-radius: 50%;
+            transform: translateY(-50%);
         }
 
-        @media (max-width: 480px) {
-            .product img {
-                width: 200px; /* Updated width for small screens */
-            }
+        .arrow.left {
+            left: 10px;
         }
 
+        .arrow.right {
+            right: 10px;
+        }
+
+        /* Footer Style */
+        footer {
+            background-color: rgba(34, 34, 34, 0.8);
+            padding: 15px;
+            text-align: center;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -153,26 +109,38 @@
     <!-- Product Showcase Section -->
     <section class="product-showcase">
         <h1>Product Showcase</h1>
-
-        <div class="product">
-            <h2>AirPods</h2>
-            <img src="AirPods.png" alt="AirPods">
+        
+        <!-- Carousel Container -->
+        <div class="carousel">
+            <div class="product">
+                <h2>AirPods</h2>
+                <a href="AirPods.html">
+                    <img src="AirPods.png" alt="AirPods">
+                </a>
+            </div>
+            <div class="product">
+                <h2>Combo Deals</h2>
+                <a href="Combo Deals.html">
+                    <img src="Combo Deals.png" alt="Combo Deals">
+                </a>
+            </div>
+            <div class="product">
+                <h2>Gaming</h2>
+                <a href="Gaming.html">
+                    <img src="Gaming.png" alt="Gaming">
+                </a>
+            </div>
+            <div class="product">
+                <h2>Smart Watches</h2>
+                <a href="Smart Watches.html">
+                    <img src="Smart Watches.png" alt="Smart Watches">
+                </a>
+            </div>
         </div>
 
-        <div class="product">
-            <h2>Combo Deals</h2>
-            <img src="Combo Deals.png" alt="Combo Deals">
-        </div>
-
-        <div class="product">
-            <h2>Gaming</h2>
-            <img src="Gaming.png" alt="Gaming">
-        </div>
-
-        <div class="product">
-            <h2>Smart Watches</h2>
-            <img src="Smart Watches.png" alt="Smart Watches">
-        </div>
+        <!-- Navigation Arrows -->
+        <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow right" onclick="nextSlide()">&#10095;</div>
     </section>
 
     <!-- About Us Section -->
