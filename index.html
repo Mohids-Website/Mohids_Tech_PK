@@ -20,15 +20,14 @@
             background-size: cover; /* Make sure the image covers the entire background */
             background-position: center; /* Centers the image */
             background-attachment: fixed; /* Keeps the background fixed while scrolling */
-            color: white; /* Change text color to white */
+            color: #ffffff;
         }
 
         /* Header Style */
         header {
-            background-color: rgba(35, 142, 194, 1); /* Background behind text */
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 15px;
             text-align: center;
-            color: white; /* Change text color to white */
         }
 
         /* Navigation Bar Style */
@@ -49,7 +48,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: white; /* Change link text color to white */
+            color: #ffffff;
             font-weight: bold;
             padding: 10px 15px;
             display: block;
@@ -60,37 +59,8 @@
             color: #ff5722;
         }
 
-        /* About Us Section */
-        .about-us {
-            background-color: rgba(35, 142, 194, 1); /* Background behind text */
-            color: white; /* Change text color to white */
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .about-us h2 {
-            text-align: center;
-            color: white; /* Change header color to white */
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .about-us p {
-            line-height: 1.6;
-            font-size: 1.1em;
-        }
-
-        .about-us a {
-            color: white; /* Change link color to white */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* New Image Section */
-        .image-section {
+        /* New Images Section */
+        .new-images {
             display: flex;
             flex-direction: column; /* Changed to vertical arrangement */
             justify-content: center;
@@ -101,38 +71,40 @@
             width: 80%;
         }
 
-        .image-section img {
-            width: 900px; /* Updated width */
-            height: 400px; /* Height auto for proportional scaling */
+        .new-images img {
+            width: 900px;
+            height: 500px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
-        /* Product Categories */
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+        /* About Us Section */
+        .about-us {
+            background-color: #000000;
+            color: #ffffff;
             margin: 20px auto;
-        }
-
-        .category {
-            background-color: rgba(34, 34, 34, 0.8);
-            padding: 15px;
-            width: 150px;
-            text-align: center;
+            padding: 20px;
+            width: 80%;
             border-radius: 8px;
-            transition: background-color 0.3s ease;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .category:hover {
-            background-color: rgba(255, 87, 34, 0.8);
+        .about-us h2 {
+            text-align: center;
+            color: #ff5722;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
 
-        .category h3 {
-            color: white; /* Change text color to white */
+        .about-us p {
+            line-height: 1.6;
             font-size: 1.1em;
+        }
+
+        .about-us a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         /* Product Showcase Section */
@@ -143,14 +115,6 @@
             overflow: hidden;
             max-width: 80%;
             margin: auto;
-        }
-
-        .product-showcase h1 {
-            background-color: rgba(35, 142, 194, 1); /* Background behind the title */
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            display: inline-block;
         }
 
         .carousel {
@@ -173,14 +137,9 @@
             cursor: pointer;
         }
 
-        /* Background behind product names */
         .product h2 {
-            background-color: rgba(35, 142, 194, 1); /* Background behind product names */
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
             font-size: 1.2em;
-            margin-top: 10px;
+            color: #333;
         }
 
         /* Navigation Arrows */
@@ -210,10 +169,18 @@
 
         /* Footer Style */
         footer {
-            background-color: rgba(35, 142, 194, 1); /* Background behind text */
+            background-color: rgba(34, 34, 34, 0.8);
             padding: 15px;
             text-align: center;
-            color: white; /* Change footer text color to white */
+            color: #ffffff;
+        }
+
+        /* Background behind text */
+        .background-text {
+            background-color: rgba(35, 142, 194, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -224,6 +191,13 @@
         <h1>Mohid's Tech Store</h1>
         <p>A TechStore Website For Every Kind Of Technical Products.</p>
     </header>
+
+    <!-- New Images Section -->
+    <section class="new-images">
+        <img src="Our Channels.png" alt="Our Channels">
+        <img src="Contact Us.png" alt="Contact Us">
+        <img src="Our Story.jpg" alt="Our Story">
+    </section>
 
     <!-- Product Categories -->
     <section class="categories">
@@ -271,7 +245,7 @@
 
     <!-- Product Showcase Section -->
     <section class="product-showcase">
-        <h1>Product Showcase</h1>
+        <h1 class="background-text">Product Showcase</h1>
         
         <!-- Carousel Container -->
         <div class="carousel">
@@ -312,6 +286,7 @@
         <p>
             ⦿ <strong>𝗜𝗡𝗧𝗥𝗢</strong><br>
             ᴍʏ ɴᴀᴍᴇ ɪs MOHID JADOON & ɪ'ᴍ ꜰʀᴏᴍ ABBOTTABAD, ᴘᴀᴋɪsᴛᴀɴ. ɪ ꜱᴛᴀʀᴛᴇᴅ ᴛʜɪs WEBSITE ʙᴇᴄᴀᴜsᴇ ᴏғ ᴍʏ ᴘᴀssɪᴏɴ ꜰᴏʀ ᴛᴇᴄʜ & ᴛᴏ ᴍᴀᴋᴇ ᴘᴇᴏᴘʟᴇ's ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴏꜰ ᴜsɪɴɢ ᴛᴇᴄʜ ᴇᴀsɪᴇʀ!
+            <br><br>
         </p>
     </section>
 
