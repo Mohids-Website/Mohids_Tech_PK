@@ -29,6 +29,72 @@
             text-align: center;
         }
 
+        /* Navigation Bar Style */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(51, 51, 51, 0.8);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+
+        /* About Us Section */
+        .about-us {
+            background-color: #000000;
+            color: #ffffff;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-us h2 {
+            text-align: center;
+            color: #ff5722;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .about-us p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .about-us a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        
+        /* Header Style */
+        header {
+            background-color: rgba(34, 34, 34, 0.8);
+            padding: 15px;
+            text-align: center;
+        }
+
         /* Product Carousel */
         .product-showcase {
             text-align: center;
@@ -142,6 +208,40 @@
         <div class="arrow left" onclick="prevSlide()">&#10094;</div>
         <div class="arrow right" onclick="nextSlide()">&#10095;</div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Website By AbdulMohidJadoon</p>
+    </footer>
+
+    <!-- JavaScript for Carousel Navigation -->
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.carousel');
+            const totalSlides = slides.children.length;
+            
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+            
+            const offset = -currentIndex * 100;
+            slides.style.transform = 'translateX(' + offset + '%)';
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+    </script>
 
     <!-- About Us Section -->
     <section class="about-us">
