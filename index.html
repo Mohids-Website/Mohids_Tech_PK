@@ -118,12 +118,28 @@
             border: 2px solid #ddd;
             border-radius: 8px;
             padding: 5px;
+            max-width: 100%;
         }
 
         .product h2 {
             font-size: 1.2em;
             color: #333;
         }
+
+        /* Responsive Image for Small Screens */
+        @media (max-width: 768px) {
+            .product img {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product img {
+                width: 200px; /* Updated width for small screens */
+            }
+        }
+
     </style>
 </head>
 <body>
